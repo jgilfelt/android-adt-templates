@@ -8,11 +8,6 @@
             android:label="@string/title_${activityToLayout(activityClass)}"
             </#if>
             android:theme="@android:style/Theme.Holo.NoActionBar"
-            <#if buildApi gte 16 && parentActivityClass != "">android:parentActivityName="${parentActivityClass}"</#if>>
-            <#if parentActivityClass != "">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="${parentActivityClass}" />
-            </#if>
             <#if isLauncher>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
