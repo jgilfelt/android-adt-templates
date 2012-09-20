@@ -38,7 +38,7 @@ public class ${CollectionName}Activity extends SherlockFragmentActivity
         setContentView(R.layout.activity_${collection_name});
         <#if parentActivityClass != "">
         // Show the Up button in the action bar.
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         </#if>
 
         if (findViewById(R.id.${detail_name}_container) != null) {
