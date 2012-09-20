@@ -2,14 +2,10 @@
 <template
     format="3"
     revision="1"
-    name="New Map Based Support Fragment Master/Detail"
+    name="New Map Based Fragment Activity"
     minApi="4"
-    description="Creates a new map based master/detail activity using a LocalActivityManager hack to enable MapView within a support fragment.">
+    description="Creates a new map based master/detail activity using a LocalActivityManager hack to enable MapView within a support fragment. Ensure that your project builds against a Google APIs platform version.">
     <dependency name="android-support-v4" revision="8" />
-
-    <thumbs>
-        <thumb>template_master_detail.png</thumb>
-    </thumbs>
 
     <category value="Flows" />
 
