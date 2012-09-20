@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<template
+    format="3"
+    revision="1"
+    minApi="11"
+    name="New Google TV Left Nav Activity"
+    description="Creates a new blank activity with a left navigation/action bar implementation optimized for Google TV.">
+    
+    <category value="Activities" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="${layoutToActivity(layoutName)}"
+        default="MainActivity"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(activityClass)}"
+        default="activity_main"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="activityTitle"
+        name="Title"
+        type="string"
+        constraints="nonempty"
+        default="MainActivity"
+        suggest="${activityClass}"
+        help="The name of the activity. For launcher activities, the application title." />
+
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+    <parameter
+        id="barBehavior"
+        name="Behavior"
+        type="enum"
+        default="auto"
+        help="How the left navigation bar should behave" >
+        <option id="auto" default="true">Expand on focus</option>
+        <option id="expand">Expanded</option>
+        <option id="collapse">Collapsed</option>
+    </parameter>
+
+    <parameter
+        id="navType"
+        name="Navigation Type"
+        type="enum"
+        default="none"
+        help="The type of navigation to use for the activity" >
+        <option id="none" default="true">None</option>
+        <option id="tabs">Tabs</option>
+        <option id="list">List</option>
+    </parameter>
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
