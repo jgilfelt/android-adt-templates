@@ -2,6 +2,7 @@
 <template
     format="3"
     revision="1"
+    minApi="7"
     name="New Blank Activity (ActionBarSherlock)"
     description="Creates a new blank activity, with optional inner navigation. You must ensure your project includes the ActionBarSherlock library dependency and the application theme inherits from a Theme.Sherlock.* base.">
 
