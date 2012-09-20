@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<template
+    format="3"
+    revision="1"
+    name="New Master/Detail Flow (ActionBarSherlock)"
+    minApi="7"
+    description="Creates a new master/detail flow, which is two columns on tablets, and one column on smaller screens. This creates a master fragment, detail fragment, and two activities. You must ensure your project includes the ActionBarSherlock library dependency and the application theme inherits from a Theme.Sherlock.* base.">
+
+    <thumbs>
+        <thumb>template_master_detail.png</thumb>
+    </thumbs>
+
+    <category value="Flows" />
+
+    <parameter
+        id="objectKind"
+        name="Object Kind"
+        type="string"
+        constraints="nonempty"
+        default="Item"
+        help="Other examples are 'Person', 'Book', etc." />
+
+    <parameter
+        id="objectKindPlural"
+        name="Object Kind Plural"
+        type="string"
+        constraints="nonempty"
+        default="Items"
+        help="Other examples are 'People', 'Books', etc." />
+
+    <parameter
+        id="activityTitle"
+        name="Title"
+        type="string"
+        constraints="nonempty"
+        suggest="${objectKindPlural}"
+        default="Items" />
+
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, the primary activity in the flow will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+    <parameter
+        id="parentActivityClass"
+        name="Hierarchical Parent"
+        type="string"
+        constraints="activity|exists|empty"
+        default=""
+        help="The hierarchical parent activity, used to provide a default implementation for the 'Up' button" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

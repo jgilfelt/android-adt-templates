@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<template
+    format="3"
+    revision="1"
+    name="New Blank Activity (ActionBarSherlock)"
+    description="Creates a new blank activity, with optional inner navigation. You must ensure your project includes the ActionBarSherlock library dependency and the application theme inherits from a Theme.Sherlock.* base.">
+
+    <category value="Activities" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="${layoutToActivity(layoutName)}"
+        default="MainActivity"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(activityClass)}"
+        default="activity_main"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="activityTitle"
+        name="Title"
+        type="string"
+        constraints="nonempty"
+        default="MainActivity"
+        suggest="${activityClass}"
+        help="The name of the activity. For launcher activities, the application title." />
+
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+    <parameter
+        id="parentActivityClass"
+        name="Hierarchical Parent"
+        type="string"
+        constraints="activity|exists|empty"
+        default=""
+        help="The hierarchical parent activity, used to provide a default implementation for the 'Up' button" />
+
+    <parameter
+        id="navType"
+        name="Navigation Type"
+        type="enum"
+        default="none"
+        help="The type of navigation to use for the activity" >
+        <option id="none" default="true">None</option>
+        <option id="tabs">Tabs</option>
+        <option id="tabs_pager">Tabs + Swipe</option>
+        <option id="pager_strip">Swipe Views + Title Strip</option>
+        <option id="dropdown">Dropdown</option>
+    </parameter>
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+        <!-- attributes act as selectors based on chosen parameters -->
+        <thumb navType="none">template_blank_activity.png</thumb>
+        <thumb navType="tabs">template_blank_activity_tabs.png</thumb>
+        <thumb navType="tabs_pager">template_blank_activity_tabs_pager.png</thumb>
+        <thumb navType="pager_strip">template_blank_activity_pager.png</thumb>
+        <thumb navType="dropdown">template_blank_activity_dropdown.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
