@@ -14,7 +14,7 @@ Note that ADT templates do not manage external dependencies for you (outside of 
 MapFragmentMasterDetail
 =======================
 
-![template](http://jeffgilfelt.com/img/map_template.png "template")
+![template](http://jeffgilfelt.com/img/map_template2.png "template")
 
 This template creates an API 4+ compatible map based master/detail activity using a LocalActivityManager hack to enable MapView within a support fragment. Ensure that your project builds against a Google APIs platform version before using this template.
 
