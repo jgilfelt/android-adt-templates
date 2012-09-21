@@ -5,7 +5,11 @@ A small collection of ADT templates for Android development to help quickly scaf
 
 Read more about ADT templates and their format here: https://plus.google.com/113735310430199015092/posts/XTKTamk4As8 
 
-To use these templates you will need Eclipse and ADT version 20 or above. Copy the appropriate folders into `<android-sdk-folder>/extras/templates/activities/` and they will appear in the project explorer context menu under **New > Other... > Android > Android Object**
+To use these templates you will need Eclipse and ADT version ~~20~~ 21 or above. Copy the appropriate folders into `<android-sdk-folder>/extras/templates/activities/` and they will appear in the project explorer context menu under 
+
+**New > Other... > Android > Android Object**
+
+ADT 21 is currently in beta. Developers can install it via the preview channel: http://tools.android.com/preview-channel
 
 ![templates](http://jeffgilfelt.com/img/templates.png "templates")
 
