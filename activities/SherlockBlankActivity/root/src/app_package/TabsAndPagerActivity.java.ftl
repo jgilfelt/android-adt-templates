@@ -49,7 +49,7 @@ public class ${activityClass} extends SherlockFragmentActivity<#if navType?conta
         </#if>
         <#elseif parentActivityClass != "">
         // Show the Up button in the action bar.
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         </#if>
 
         // Create the adapter that will return a fragment for each of the three
