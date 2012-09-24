@@ -5,7 +5,7 @@ A small collection of ADT templates for Android development to help quickly scaf
 
 Read more about ADT templates and their format here: https://plus.google.com/113735310430199015092/posts/XTKTamk4As8 
 
-To use these templates you will need Eclipse and ADT version ~~20~~ 21 or above. Copy the appropriate folders into `<android-sdk-folder>/extras/templates/activities/` and they will appear in the project explorer context menu under 
+To use these templates you will need Eclipse and ADT version ~~20~~ 21 or above. Copy the appropriate folders into `<android-sdk-folder>/extras/templates/` and they will appear in the project explorer context menu under: 
 
 **New > Other... > Android > Android Object**
 
@@ -14,6 +14,11 @@ ADT 21 is currently in beta. Developers can install it via the preview channel: 
 ![templates](http://jeffgilfelt.com/img/templates.png "templates")
 
 Note that ADT templates do not manage external dependencies for you (outside of the official support library). For the Sherlock templates you should ensure your projects include the ActionBarSherlock library dependency and the application theme inherits from a Theme.Sherlock.* base before using them.
+
+EfficientListAdapter
+====================
+
+This template creates an efficient list adapter using the view holder pattern, a sample list item layout and an optional alphabetic section indexer.
 
 MapFragmentMasterDetail
 =======================

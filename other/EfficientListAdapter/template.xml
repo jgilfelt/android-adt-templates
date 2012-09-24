@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<template
+    format="3"
+    revision="1"
+    name="New Efficient List Adapter"
+    minApi="4"
+    description="Creates an efficient list adapter using the view holder pattern, a custom list item layout and an optional alphabetic section indexer.">
+
+    <parameter
+        id="objectKind"
+        name="Object Kind"
+        type="string"
+        constraints="nonempty"
+        default="Item"
+        help="Other examples are 'Person', 'Book', etc." />
+
+    <parameter
+        id="isSectioned"
+        name="Include Section Index"
+        type="boolean"
+        default="false"
+        help="If true, the adapter will implement an A-Z section indexer for fast scroll enabled list views" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
