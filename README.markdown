@@ -27,6 +27,11 @@ MapFragmentMasterDetail
 
 This template creates an API 4+ compatible map based master/detail activity using a LocalActivityManager hack to enable MapView within a support fragment. Ensure that your project builds against a Google APIs platform version before using this template.
 
+ParcelableType
+==============
+
+This template creates a new class implementing Parcelable (including the required static CREATOR object boilerplate) for temporal high-performance IPC serialization and transport.
+
 SherlockBlankActivity
 =====================
 

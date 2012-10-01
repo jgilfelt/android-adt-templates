@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<template
+    format="3"
+    revision="1"
+    name="New Parcelable Type"
+    minApi="1"
+    description="Creates a new class implementing Parcelable for temporal high-performance IPC serialization and transport.">
+
+    <parameter
+        id="objectKind"
+        name="Object Kind"
+        type="string"
+        constraints="nonempty"
+        default="Item"
+        help="Other examples are 'Person', 'Book', etc." />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
