@@ -120,7 +120,7 @@ public class ${objectKind}Adapter extends BaseAdapter implements SectionIndexer 
         // to reinflate it. We only inflate a new View when the convertView supplied
         // by ListView is null.
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.list_item_${objectKind?lower_case}, null);
+            convertView = mInflater.inflate(R.layout.list_item_${objectKind?lower_case}, parent, false);
 
             // Creates a ViewHolder and store references to the two children views
             // we want to bind data to.
