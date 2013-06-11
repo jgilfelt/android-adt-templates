@@ -48,6 +48,8 @@ MasterDetailFlow (SlidingPaneLayout)
 
 This template is a SlidingPaneLayout version of the MasterDetailFlow template. Creates a new master/detail flow, allowing users to view a collection of objects as well as details for each object. This flow is presented using two columns. If the combined width of the two columns exceeds the available space, then the content (detail) pane overlaps the master (list) pane. This template creates one activity, a master fragment, and a detail fragment.
 
+Based on [this blog post](http://gmariotti.blogspot.in/2013/05/working-with-slidingpanelayout.html) by [Gabriele Mariotti](https://plus.google.com/114432517923423045208)
+
 
 TVLeftNavBarActivity
 ====================
