@@ -3,9 +3,9 @@ ADT Templates
 
 A small collection of ADT templates for Android development to help quickly scaffold common Activity and UI patterns.
 
-Read more about ADT templates and their format here: https://plus.google.com/113735310430199015092/posts/XTKTamk4As8 
+Read more about ADT templates and their format here: https://plus.google.com/113735310430199015092/posts/XTKTamk4As8
 
-To use these templates you will need Eclipse and ADT version 21 or above. Copy the appropriate folders into `<android-sdk-folder>/extras/templates/` and they will appear in the project explorer context menu under: 
+To use these templates you will need Eclipse and ADT version 21 or above. Copy the appropriate folders into `<android-sdk-folder>/extras/templates/` and they will appear in the project explorer context menu under:
 
 **New > Other... > Android > Android Object**
 
@@ -25,7 +25,7 @@ MapFragmentMasterDetail
 
 DEPRECATED - use Google Maps Android API v2: https://developers.google.com/maps/documentation/android/
 
-This template creates an API 4+ compatible map based master/detail activity using a LocalActivityManager hack to enable MapView within a support fragment. Ensure that your project builds against a Google APIs platform version before using this template. 
+This template creates an API 4+ compatible map based master/detail activity using a LocalActivityManager hack to enable MapView within a support fragment. Ensure that your project builds against a Google APIs platform version before using this template.
 
 ParcelableType
 ==============
@@ -41,6 +41,15 @@ SherlockMasterDetailFlow
 ========================
 
 This template is an API 7+ ActionBarSherlock compatible version of the official MasterDetailFlow template. It creates a new master/detail flow, which is two columns on tablets, and one column on smaller screens. This creates a master fragment, detail fragment, and two activities.
+
+
+MasterDetailFlow (SlidingPaneLayout)
+====================================
+
+This template is a SlidingPaneLayout version of the MasterDetailFlow template. Creates a new master/detail flow, allowing users to view a collection of objects as well as details for each object. This flow is presented using two columns. If the combined width of the two columns exceeds the available space, then the content (detail) pane overlaps the master (list) pane. This template creates one activity, a master fragment, and a detail fragment.
+
+Based on [this blog post](http://gmariotti.blogspot.in/2013/05/working-with-slidingpanelayout.html) by [Gabriele Mariotti](https://plus.google.com/114432517923423045208)
+
 
 TVLeftNavBarActivity
 ====================

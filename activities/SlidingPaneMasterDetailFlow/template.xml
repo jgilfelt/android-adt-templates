@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<template
+    format="3"
+    revision="2"
+    name="Master/Detail Flow (SlidingPane)"
+    minApi="11"
+    description="Creates a new master/detail flow, allowing users to view a collection of objects as well as details for each object. This flow is presented using two columns. If the combined width of the two columns exceeds the available space, then the content (detail) pane overlaps the master (list) pane. This template creates one activity, a master fragment, and a detail fragment.">
+    <dependency name="android-support-v4" revision="13" />
+
+    <thumbs>
+        <thumb>template_master_detail.png</thumb>
+    </thumbs>
+
+    <category value="Flows" />
+
+    <parameter
+        id="objectKind"
+        name="Object Kind"
+        type="string"
+        constraints="nonempty"
+        default="Item"
+        help="Other examples are 'Person', 'Book', etc." />
+
+    <parameter
+        id="objectKindPlural"
+        name="Object Kind Plural"
+        type="string"
+        constraints="nonempty"
+        default="Items"
+        help="Other examples are 'People', 'Books', etc." />
+
+    <parameter
+        id="activityTitle"
+        name="Title"
+        type="string"
+        constraints="nonempty"
+        suggest="${objectKindPlural}"
+        default="Items" />
+
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, the primary activity in the flow will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+    <parameter
+        id="parentActivityClass"
+        name="Hierarchical Parent"
+        type="string"
+        constraints="activity|exists|empty"
+        default=""
+        help="The hierarchical parent activity, used to provide a default implementation for the 'Up' button" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
