@@ -63,7 +63,8 @@ This template creates a new blank activity with a left navigation/action bar imp
 Credits
 -------
 
-Author: Jeff Gilfelt
++ [Jeff Gilfelt](https://github.com/jgilfelt)
++ [Kiran Rao](https://github.com/curioustechizen)
 
 License
 -------
