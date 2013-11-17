@@ -5,7 +5,7 @@ A small collection of ADT templates for Android development to help quickly scaf
 
 Read more about ADT templates and their format here: https://plus.google.com/113735310430199015092/posts/XTKTamk4As8
 
-To use these templates you will need Eclipse and ADT version 21 or above. Copy the appropriate folders into `<android-sdk-folder>/extras/templates/` and they will appear in the project explorer context menu under:
+To use these templates you will need Eclipse and ADT version 21 or above. Copy the appropriate folders into `<android-sdk-folder>/tools/templates/` and they will appear in the project explorer context menu under:
 
 **New > Other... > Android > Android Object**
 
